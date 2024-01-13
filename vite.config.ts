@@ -14,7 +14,11 @@ export default ({ mode }) => {
         '/api': {
           target: process.env.VITE_UI_API_BASE, // see .env, DEV: "http://localhost:3050",
           changeOrigin: true,
-          secure: false
+          secure: false,
+          headers: {
+            "ngrok-skip-browser-warning":"any",
+            'Access-Control-Allow-Headers': '*'
+          }
         }
       }
     }
