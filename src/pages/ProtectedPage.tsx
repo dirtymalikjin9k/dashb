@@ -19,18 +19,18 @@ const ProtectedPage = (props: any) => {
     isAnonymous: boolean;
     settingJson: string;
   }) => {
-    const url = isAnonymous === true ? `/api/auth/anonymous` : `/api/auth/google`;
+    const url = isAnonymous === true ? `@/api/auth/anonymous` : `/api/auth/google`;
     const { data: authRes } = await apiPost(url, {
       // http://localhost:3001/auth/google backend that will exchange the code
       payload: { code, userId: getLS('userId', ''), settingJson },
       noAuth: true
     });
-    if (!authRes?.jwtToken && !process.env.bearToken) {
+    if (!authRes?.jwtToken) {
       alert('Auth or Backend Service failed.');
       return;
     }
     // console.log('authRes', authRes);
-    localStorage.setItem('tk', authRes?.jwtToken ? authRes?.jwtToken : process.env.bearToken);
+    localStorage.setItem('tk', authRes?.jwtToken);
 
     // try to get /userinfo with jwtToken
     const {
