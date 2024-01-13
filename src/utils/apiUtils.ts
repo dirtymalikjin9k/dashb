@@ -87,12 +87,7 @@ export const apiPost = async (path: string, params?: ApiParams) => {
     const { data, status } = await axiosApi({
       url,
       method: 'POST',
-      headers: path.startsWith('http') ? {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        'Access-Control-Allow-Credentials': 'true'
-      } : getAuthHeader(params),
+      headers: path.startsWith('http') ? {} : getAuthHeader(params),
       data: params?.payload,
       ...params?.options
     });
