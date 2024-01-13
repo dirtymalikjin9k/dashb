@@ -25,7 +25,11 @@ function getAuthHeader(params?: ApiParams) {
   }
   return {
     authorization: `Bearer ${token}`,
-    ...(params?.options?.headers ?? {})
+    ...(params?.options?.headers ?? {
+      "ngrok-skip-browser-warning":"any",
+      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Methods": "GET, POST"
+    })
   };
 }
 
