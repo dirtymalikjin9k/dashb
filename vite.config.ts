@@ -9,7 +9,7 @@ export default ({ mode }) => {
     plugins: [react()],
     // proxy for Backend APIs to avoid CORS issues.
     server: {
-      port: 5300, // UI port
+      port: 80, // UI port
       proxy: {
         '/api': {
           target: process.env.VITE_UI_API_BASE, // see .env, DEV: "http://localhost:3050",
