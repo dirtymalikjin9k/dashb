@@ -18,7 +18,7 @@ export default function Weather({ wid }: Props) {
   const [weatherData, setWeatherdData] = useState<any>({ ready: false });
 
   async function search(city: string) {
-    let apiUrl = `/api/weather/data?wid=${wid}&city=${city}`;
+    let apiUrl = `@/api/weather/data?wid=${wid}&city=${city}`;
     const { data } = await apiGet(apiUrl, {});
     const info = data.data;
     setWeatherdData({
