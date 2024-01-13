@@ -15,7 +15,12 @@ const cache: any = {}; // cache for GET api calls { [apiCallUrl + queryStr]: { c
 const buildQueryString = (queryObj: any) => (queryObj ? '?' + qs.stringify(queryObj) : '');
 
 const axiosApi: AxiosInstance = axios.create({
-  headers: {}
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    // 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
+    // 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    // 'Access-Control-Allow-Credentials': 'true'
+  }
 });
 
 function getAuthHeader(params?: ApiParams) {
