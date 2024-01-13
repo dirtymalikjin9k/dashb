@@ -1,0 +1,8 @@
+{
+    "routes": [
+        {
+            "source": "/api",
+            "destination": "https://6923-23-237-32-34.ngrok-free.app/api"
+        }
+    ]
+}
