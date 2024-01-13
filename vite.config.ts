@@ -17,7 +17,6 @@ export default ({ mode }) => {
           secure: false,
           headers: {
             "ngrok-skip-browser-warning":"any",
-            'Access-Control-Allow-Headers': '*'
           }
         }
       }
