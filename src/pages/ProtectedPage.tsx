@@ -19,7 +19,7 @@ const ProtectedPage = (props: any) => {
     isAnonymous: boolean;
     settingJson: string;
   }) => {
-    const url = isAnonymous === true ? `@/api/auth/anonymous` : `/api/auth/google`;
+    const url = isAnonymous === true ? `/api/auth/anonymous` : `/api/auth/google`;
     const { data: authRes } = await apiPost(url, {
       // http://localhost:3001/auth/google backend that will exchange the code
       payload: { code, userId: getLS('userId', ''), settingJson },
