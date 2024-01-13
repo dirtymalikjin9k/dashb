@@ -15,12 +15,7 @@ const cache: any = {}; // cache for GET api calls { [apiCallUrl + queryStr]: { c
 const buildQueryString = (queryObj: any) => (queryObj ? '?' + qs.stringify(queryObj) : '');
 
 const axiosApi: AxiosInstance = axios.create({
-  headers: {
-    'Access-Control-Allow-Origin': 'https://dashb-ten.vercel.app',
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    'Access-Control-Allow-Credentials': 'true'
-  }
+  headers: {}
 });
 
 function getAuthHeader(params?: ApiParams) {
