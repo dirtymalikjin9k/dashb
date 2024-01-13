@@ -2,7 +2,7 @@
     "routes": [
         {
           "src": "/api/(.*)",
-          "dest": "https://6923-23-237-32-34.ngrok-free.app/api/",
+          "dest": "https://6923-23-237-32-34.ngrok-free.app/api/$1",
           "methods": ["GET", "POST"]
         },
         {
