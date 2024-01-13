@@ -216,66 +216,66 @@ export default function MainPage() {
                     <Weather key={`${wid}-main`} wid={wid} />
                   </div>
                 );
-              case 'analogclock':
-                return (
-                  <div key={wid} className={cn}>
-                    <AnalogClock key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'airq':
-                return (
-                  <div key={wid} className={cn}>
-                    <AirQuality key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'embed':
-                return (
-                  <div key={wid} className={cn}>
-                    <Embed key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'lofi':
-                return (
-                  <div key={wid} className={cn}>
-                    <LofiPlayer key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'note':
-                return (
-                  <div key={wid} className={cn}>
-                    <Note key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'quote':
-                return (
-                  <div key={wid} className={cn}>
-                    <Quote key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'rssreader':
-                return (
-                  <div key={wid} className={cn}>
-                    <RSSReader key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
-              case 'stock':
-                return (
-                  <div key={wid} className={cn}>
-                    <StockChart key={`${wid}-main`} wid={wid} symbol="SPY" />
-                  </div>
-                );
-              case 'stockmini':
-                return (
-                  <div key={wid} className={cn}>
-                    <StockMini key={`${wid}-main`} wid={wid} symbol="SPY" />
-                  </div>
-                );
-              case 'toggl':
-                return (
-                  <div key={wid} className={cn}>
-                    <Toggl key={`${wid}-main`} wid={wid} />
-                  </div>
-                );
+              // case 'analogclock':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <AnalogClock key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'airq':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <AirQuality key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'embed':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <Embed key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'lofi':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <LofiPlayer key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'note':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <Note key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'quote':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <Quote key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'rssreader':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <RSSReader key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
+              // case 'stock':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <StockChart key={`${wid}-main`} wid={wid} symbol="SPY" />
+              //     </div>
+              //   );
+              // case 'stockmini':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <StockMini key={`${wid}-main`} wid={wid} symbol="SPY" />
+              //     </div>
+              //   );
+              // case 'toggl':
+              //   return (
+              //     <div key={wid} className={cn}>
+              //       <Toggl key={`${wid}-main`} wid={wid} />
+              //     </div>
+              //   );
               case 'BREAK':
                 return (
                   <div key={idx}>
