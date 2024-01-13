@@ -17,7 +17,7 @@ export default ({ mode }) => {
           secure: false,
           headers: {
             "ngrok-skip-browser-warning":"any",
-            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Origin': '*',
             "Access-Control-Allow-Methods": "GET, POST"
           },
           // Add this line to allow both GET and POST methods
