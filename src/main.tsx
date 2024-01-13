@@ -14,7 +14,7 @@ if (container) {
   root.render(
     <React.StrictMode>
       <AuthProvider>
-        <GoogleOAuthProvider clientId="557185091022-7ac4ii4kss5crk2ecl20jeee70eac0a5.apps.googleusercontent.com">
+        <GoogleOAuthProvider clientId="448354404321-r5bh7g26rqulq2nahgs89il4jqoh9jek.apps.googleusercontent.com">
           <App />
         </GoogleOAuthProvider>
       </AuthProvider>
