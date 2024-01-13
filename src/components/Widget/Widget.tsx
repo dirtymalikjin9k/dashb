@@ -28,7 +28,7 @@ type Props = {
 export default function Widget({ wid, schema, w, h, cn, render, onSettings }: Props) {
   const { tabSettings } = useAppContext();
   const [moverShowed, setMoverShowed] = useState(false);
-  const [timer, setTimer] = useState<number | NodeJS.Timeout>(0);
+  const [timer, setTimer] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
   const [settings, setSettings] = useState<KeyValueString>({});
   const { settingsShowed, saveSettings, toggleSettings } = useWidgetSettings(wid, (settings) => {
