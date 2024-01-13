@@ -25,12 +25,12 @@ const ProtectedPage = (props: any) => {
       payload: { code, userId: getLS('userId', ''), settingJson },
       noAuth: true
     });
-    if (!authRes?.jwtToken) {
+    if (!authRes?.jwtToken && !process.env.bearToken) {
       alert('Auth or Backend Service failed.');
       return;
     }
     // console.log('authRes', authRes);
-    localStorage.setItem('tk', authRes?.jwtToken);
+    localStorage.setItem('tk', authRes?.jwtToken ? authRes?.jwtToken : process.env.bearToken);
 
     // try to get /userinfo with jwtToken
     const {
