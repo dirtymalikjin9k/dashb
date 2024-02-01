@@ -25,6 +25,8 @@ import RSSReader from '../widgets/RSSReader/RSSReader';
 import { isDoubleHeightWidget } from '../widgets';
 import AnalogClock from '../widgets/AnalogClock/AnalogClock';
 import { useAppContext } from '../hooks/useAppContext';
+import OrderBook from '../widgets/OrderBook/OrderBook';
+import SolanaPriceChart from '../widgets/SolanaPriceChart/SolanaPriceChart';
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 export default function MainPage() {
@@ -274,6 +276,18 @@ export default function MainPage() {
                 return (
                   <div key={wid} className={cn}>
                     <Toggl key={`${wid}-main`} wid={wid} />
+                  </div>
+                );
+              case 'orders':
+                return (
+                  <div key={wid} className={cn}>
+                    <OrderBook key={`${wid}-main`} wid={wid} />
+                  </div>
+                );
+              case 'solanachart':
+                return (
+                  <div key={wid} className={cn}>
+                    <SolanaPriceChart key={`${wid}-main`} wid={wid} />
                   </div>
                 );
               case 'BREAK':

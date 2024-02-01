@@ -10,6 +10,8 @@ import jsonStockChart from './StockChart/StockChart.json';
 import jsonStockMini from './StockMini/StockMini.json';
 import jsonToggl from './Toggl/Toggl.json';
 import jsonWeather from './Weather/Weather.json';
+import jsonOrders from './OrderBook/OrderBook.json';
+import jsonSolanaChart from './SolanaPriceChart/SolanaPriceChart.json';
 
 export function isIframeWidget(wid: string) {
   return wid.startsWith('stock') || wid.startsWith('embed') || wid.startsWith('rssreader');
@@ -32,5 +34,7 @@ export const widgetList: Widget[] = [
   jsonStockChart,
   jsonStockMini,
   jsonToggl,
-  jsonWeather
+  jsonWeather,
+  jsonOrders,
+  jsonSolanaChart
 ];
